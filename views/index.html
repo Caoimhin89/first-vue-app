@@ -10,6 +10,13 @@
       <h1>{{ title }}</h1>
       <h3>{{ sayHello() }}</h3>
       <h3>Check out this interesting site that I linked to with Vue's attribute binding: <a v-bind:href="link">Wikipedia.org</a></h3>
+      <ul>
+        <li>{{text}}</li>
+        <li>{{text}}</li>
+        <li v-once>{{text}}</li>
+        <li>{{text}}</li>
+      </ul>
+      <input type="text" v-on:input="changeText">
     </div>
     <script src="https://unpkg.com/vue/dist/vue"></script>
     <script src="../scripts/app.js"></script>
