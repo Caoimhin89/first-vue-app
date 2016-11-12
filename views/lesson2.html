@@ -5,6 +5,11 @@
   </head>
   <body>
     <h1>Lesson 2</h1>
+    <div id="lesson2">
+      <button v-on:click="increase">Click Me!</button>
+      <p>{{ counter }}</p>
+      <p v-on:mousemove="updateCoordinates">Coordinates: {{ x }} / {{ y }}</p>
+    </div>
 
     <script src="https://unpkg.com/vue/dist/vue"></script>
     <script src="../scripts/lesson2.js"></script>
