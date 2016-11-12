@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Vue App: Exercises 1</title>
+  </head>
+  <body>
+    <h1>Exercises 1: The Basics</h1>
+    <div id="exercises1">
+      <!-- 1) Fill the <p> below with your name and age using Interpolation -->
+      <p>VueJS is pretty cool - YOUR_NAME (YOUR_AGE): {{myName}} ({{myAge}})</p>
+      <hr>
+      <!-- 2) Output your age, multiplied by 3 -->
+      <p>AGE * 3: {{myAge * 3}}</p>
+      <hr>
+      <!-- 3) Call a function to output a random float between 0 and 1 -->
+      <p>RANDOM NUMBER BETWEEN 0 AND 1: {{randomNum()}}</p>
+      <hr>
+      <!-- Search any image on Google and output it here by binding the src attribute -->
+      <div>
+        <img v-bind:src="imgLink"><caption>Link inserted into src attribute through attribute binding.</caption></img>
+      </div>
+      <hr>
+      <!-- 5) Pre-populate this input with your name -->
+      <div>
+        <label>Pre-populated input field with attribute binding:</label>
+        <input type="text" v-bind:value="myName" v-on:input="getInput">
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../scripts/exercises1.js"></script>
+  </body>
+</html>

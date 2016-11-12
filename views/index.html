@@ -6,17 +6,26 @@
 
   <body>
     <div id="app">
+      <h1>The Basics</h1>
       <input type="text" v-on:input="changeTitle">
       <h1>{{ title }}</h1>
+      <hr>
       <h3>{{ sayHello() }}</h3>
+      <hr>
       <h3>Check out this interesting site that I linked to with Vue's attribute binding: <a v-bind:href="link">Wikipedia.org</a></h3>
+      <hr>
       <ul>
         <li>{{text}}</li>
         <li>{{text}}</li>
         <li v-once>{{text}}</li>
         <li>{{text}}</li>
       </ul>
+      <label>Write something here to change the above text.</label>
       <input type="text" v-on:input="changeText">
+      <hr>
+      <h3>Here I will output raw html with the directive "v-html": <span v-html="finishedLink"><span></h3>
+      <hr>
+      <h3><a href="exercises1.html">Completed practice exercises</a></h3>
     </div>
     <script src="https://unpkg.com/vue/dist/vue"></script>
     <script src="../scripts/app.js"></script>
