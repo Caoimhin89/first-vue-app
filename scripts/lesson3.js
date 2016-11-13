@@ -3,12 +3,18 @@ new Vue({
   data: {
     name: 'Kevin',
     counter: 0,
-    result: ''
+    secondCounter: 0
+  },
+  computed: {
+    output: function() {
+      console.log('Computed');
+      return this.relativeToFive();
+    }
   },
   methods: {
-    increase: function() {
-      this.counter++;
-      this.result = this.relativeToFive();
+    result: function() {
+      console.log('Method');
+      return this.relativeToFive();
     },
     relativeToFive: function() {
       if(this.counter > 5) {
@@ -18,10 +24,6 @@ new Vue({
       } else {
         return "Less than 5";
       }
-    },
-    decrease: function() {
-      this.counter--;
-      this.result = this.relativeToFive();
     }
   }
 });

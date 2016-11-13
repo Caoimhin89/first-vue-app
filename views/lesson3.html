@@ -9,10 +9,11 @@
       <input type="text" v-model="name">
       <p>{{ name }}</p>
       <hr>
-      <button v-on:click="increase">Increase</button>
-      <button v-on:click="decrease">Decrease</button>
-      <p>Counter: {{ counter }}</p>
-      <p>Result: {{ result }}</p>
+      <button v-on:click="counter++">Increase</button>
+      <button v-on:click="counter--">Decrease</button>
+      <button v-on:click="secondCounter++">Increase Second Counter</button>
+      <p><strong>Counter:</strong> {{ counter }} | <strong>Second Counter:</strong> {{ secondCounter }}</p>
+      <p><strong>Result:</strong> {{ result() }} | <strong>Output:</strong> {{ output }}</p>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue"></script>
