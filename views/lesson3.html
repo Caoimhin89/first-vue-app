@@ -6,14 +6,40 @@
   <body>
     <h1>Lesson 3: Two-Way Binding & Reacting to Changes in Computed Properties</h1>
     <div id="lesson3">
+      <h3>Two-Way Data Binding</h3>
       <input type="text" v-model="name">
       <p>{{ name }}</p>
       <hr>
+      <h3>Reacting to Changes in Computed Properties</h3>
+      <p>Counter is incremented or decremented here through use of Vue.js's Methods and
+        Computed properties. Methods execute whenever a DOM element is changed, while Computed
+        functions will execute only when an element it depends on is changed. By opening
+        the JavaScript console in Chrome's dev tools, you can see this in action. Whenever you
+        increase or decrease the counter, both our Method & Computed functions will execute
+        and a corresponding message will be printed to the console. However, when you increment
+        the Second Counter, only our Method function will execute and print its message to the console.
+        This is because our Second Counter is not connected to our Result or Output, only the Counter is.
+        Counter changes our Output, which is the Computed property, while Second Counter does not change
+        Output. Therefore, our Computed Property will not be updated. Result is our Methods property,
+        and although it isn't connected with Second Counter either, Methods properties will always update
+        anytime a DOM element is updated. So you will still see our Methods property go to work and print
+        a message to the console when you increment the Second Counter.
       <button v-on:click="counter++">Increase</button>
       <button v-on:click="counter--">Decrease</button>
       <button v-on:click="secondCounter++">Increase Second Counter</button>
       <p><strong>Counter:</strong> {{ counter }} | <strong>Second Counter:</strong> {{ secondCounter }}</p>
       <p><strong>Result:</strong> {{ result() }} | <strong>Output:</strong> {{ output }}</p>
+      <hr>
+      <h3>Watch</h3>
+      Computed properties are synchronous. They have to be, because their job is to update immediately
+      whenever a DOM element is changed. However, sometimes you need to perform asynchronous tasks (requesting
+      data from a server and updating the DOM once the server responds with the requested data, for example).
+      This is where Vue.js's Watch property comes into play. It will watch for a certain operation to complete
+      and update the DOM once it is. We demonstrate this here with a setTimeout of 5 seconds on a Watch function
+      that resets our counter to zero. So you'll notice that after waiting 5 seconds after incrementing or decrementing
+      the counter, it will be reset to zero. Give it a try!
+      <hr>
+      <h3><a href="exercises3.html">Completed Unit 3 Exercises</a></h3>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue"></script>

@@ -11,6 +11,14 @@ new Vue({
       return this.relativeToFive();
     }
   },
+  watch: {
+    counter: function(value) {
+      var vm = this;
+      setTimeout(function() {
+        vm.counter = 0;
+      }, 5000);
+    }
+  },
   methods: {
     result: function() {
       console.log('Method');
