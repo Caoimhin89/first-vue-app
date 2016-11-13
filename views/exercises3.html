@@ -19,12 +19,15 @@
       <!-- 2) Watch for changes in the 'result' and reset the 'value' after 5
     seconds (hint: setTimeout(..., 5000)) -->
       <div>
+        <hr>
         <label>Set duration for timeout:</label>
         <input v-on:keyup.enter="setDuration($event)" type="number">
         <p>{{ value }}</p>
       </div>
       <hr>
       <p>Duration: {{ duration }}</p>
+      <hr>
+      <h3><a href="lesson4.html">Lesson 4</a></h3>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue"></script>
