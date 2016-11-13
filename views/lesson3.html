@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Vue App: Two-Way Binding</title>
+  </head>
+  <body>
+    <h1>Lesson 3: Two-Way Binding & Reacting to Changes in Computed Properties</h1>
+    <div id="lesson3">
+      <input type="text" v-model="name">
+      <p>{{ name }}</p>
+      <hr>
+      <button v-on:click="increase">Increase</button>
+      <button v-on:click="decrease">Decrease</button>
+      <p>Counter: {{ counter }}</p>
+      <p>Result: {{ result }}</p>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue"></script>
+    <script src="../scripts/lesson3.js"></script>
+  </body>
+</html>
