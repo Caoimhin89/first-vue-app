@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Vue App: Exercises 2</title>
+  </head>
+  <body>
+    <h1>Unit 2 Exercises: Events, Event Arguments, & Event Modifiers</h1>
+
+    <div id="exercises2">
+      <!-- 1) Show an alert when the button gets clicked -->
+      <div>
+        <button v-on:click="printAlert">Show Alert</button>
+      </div>
+      <hr>
+      <!-- 2) Listen to the keydown event and store the value in a data property -->
+      <div>
+        <p>Here we update the value of our javascript variable every time the keydown
+          event is fired.</p>
+        <input v-on:keydown="setValue($event)" type="text">
+        <p>{{ value }}</p>
+      </div>
+      <hr>
+      <!-- 3) Adjust the example from question 2 to only fire if the key down
+      is the ENTER KEY -->
+      <div>
+        <p>Here we update the value of our javascript variable on keydown ONLY when
+          the key which is pressed is the ENTER key. This is accomplished using an event
+          modifier.</p>
+        <input v-on:keydown.enter="setValue($event)" type="text">
+        <p>{{ value }}</p>
+      </div>
+      <hr>
+      <h3><a href="lesson3">Lesson 3</a></h3>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue"></script>
+    <script src="../scripts/exercises2.js"></script>
+  </body>
+</html>
