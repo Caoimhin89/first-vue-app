@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>My First Vue App</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/lesson4.css">
   </head>
   <body>
     <h1>Lesson 4</h1>
     <div id="lesson4">
-      
+      <div class="demo" v-on:click="attachRed = !attachRed" v-bind:class="{red: attachRed}"></div>
+      <div class="demo"></div>
+      <div class="demo"></div>
+
     </div>
     <script src="https://unpkg.com/vue/dist/vue"></script>
     <script src="../scripts/lesson4.js"></script>
