@@ -27,9 +27,9 @@
     <!-- 4) Let the user enter a class and enter true/false for another class
     (create some example classes) and attach the classes -->
     <div>
-      <input type="text">
-      <input type="text">
-      <div></div>
+      <input v-on:keyup.enter="selectClass" type="text">
+      <input v-model="isOrange" type="text">
+      <div v-bind:class="[{orange: isOrange}, selectedClass]" class="big"></div>
     </div>
     <hr>
     <!-- 5) Repeat 3) but now with values for styles (instead of class names).
@@ -42,8 +42,9 @@
     <!-- 6) Create a simple progress bar with setInterval and style bindings.
     Start it by hitting the below button. -->
     <div>
-      <button>Start Progress</button>
+      <button v-on:click="progress">Start Progress</button>
     </div>
+      <div class="blue" v-bind:style="{width: myWidth}" style="height: 30px"></div>
     <hr>
   </div>
 

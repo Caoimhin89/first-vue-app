@@ -7,7 +7,9 @@ new Vue({
     big: 'big',
     thin: 'thin',
     border: 'border',
-    selectedClass: ''
+    selectedClass: '',
+    isOrange: false,
+    progWidth: 50
   },
   computed: {
     myEffect: function() {
@@ -15,6 +17,11 @@ new Vue({
         highlight: this.highlight,
         shrink: this.shrink
       };
+    },
+    myWidth: function() {
+      var formattedWidth = this.progWidth + 'px';
+      console.log("formattedWidth: " + formattedWidth);
+      return formattedWidth;
     }
   },
   methods: {
@@ -28,6 +35,13 @@ new Vue({
     selectClass: function(event) {
       this.selectedClass = event.target.value;
       console.log(this.selectedClass);
+    },
+    progress: function() {
+      var vm = this;
+      setInterval(function() {
+        vm.progWidth += 50;
+        console.log(vm.progWidth + "inside function");
+      }, 500);
     }
   }
 });
